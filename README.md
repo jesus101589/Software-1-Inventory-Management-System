@@ -1,10 +1,10 @@
 # Software-1-Inventory-Management-System
-Inventory Management System - WGU C968 Performance Assessment
-📌 Overview
+Inventory Management System - WGU C968 Performance Assessment <br>
+📌 Overview <br>
 This Windows Forms application is designed for managing inventory for a small manufacturing company. It replaces a spreadsheet-based system with a robust, object-oriented C# application. The system allows users to add, modify, delete, and search for parts and products, as well as associate parts with specific products.
 
-🛠 Features
-✅ Main Form with search, add, modify, delete, and exit functionality for Parts and Products
+🛠 Features <br>
+✅ Main Form with search, add, modify, delete, and exit functionality for Parts and Products <br>
 ✅ Add/Modify Part Forms with In-House and Outsourced toggling
 ✅ Add/Modify Product Forms with part association and disassociation logic
 ✅ Input validation for numeric fields, min/max constraints, and inventory boundaries
