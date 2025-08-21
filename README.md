@@ -5,33 +5,18 @@ This Windows Forms application is designed for managing inventory for a small ma
 
 🛠 Features <br>
 ✅ Main Form with search, add, modify, delete, and exit functionality for Parts and Products <br>
-✅ Add/Modify Part Forms with In-House and Outsourced toggling
-✅ Add/Modify Product Forms with part association and disassociation logic
-✅ Input validation for numeric fields, min/max constraints, and inventory boundaries
-✅ Prevents deletion of parts associated with products without user confirmation
-✅ All data bound using BindingList<T> to automatically update the UI
-🧱 Technologies Used
-C#
-Windows Forms (.NET Framework 4.7.2)
-Visual Studio 2022
-Object-Oriented Design Principles
-🧩 Class Architecture
-Part (abstract): Base class with common properties
-InHouse / Outsourced: Derived classes with specific fields
-Product: Includes associated parts
-Inventory: Static class managing all products and parts
-📁 Project Structure
-MainForm.cs: Central navigation and management
-AddPartForm.cs / ModifyPartForm.cs: Handles part creation and editing
-AddProductForm.cs / ModifyProductForm.cs: Manages product creation and part associations
-🚀 How to Run
-Open the solution in Visual Studio 2022
-Ensure target framework is set to .NET Framework 4.7.2
-Build the solution and run the application
-Use the main screen to manage parts and products
-📋 Validation Rules
-Numeric input enforced for IDs, Inventory, Price, Min, Max
-Inventory must be between Min and Max
-Min must be less than Max
-Confirmation dialogs required before deletion
-Parts cannot be deleted if associated with any product
+✅ Add/Modify Part Forms with In-House and Outsourced toggling <br>
+✅ Add/Modify Product Forms with part association and disassociation logic <br>
+✅ Input validation for numeric fields, min/max constraints, and inventory boundaries <br>
+✅ Prevents deletion of parts associated with products without user confirmation <br>
+✅ All data bound using BindingList<T> to automatically update the UI <br>
+🧱 Technologies Used <br>
+C# <br>
+Windows Forms (.NET Framework 4.7.2) <br>
+Visual Studio 2022 <br>
+Object-Oriented Design Principles <br>
+🧩 Class Architecture <br>
+Part (abstract): Base class with common properties <br>
+InHouse / Outsourced: Derived classes with specific fields <br>
+Product: Includes associated parts <br>
+Inventory: Static class managing all products and parts <br>
