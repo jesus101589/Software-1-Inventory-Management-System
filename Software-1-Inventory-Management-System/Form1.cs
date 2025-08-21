@@ -13,9 +13,9 @@ namespace Software_1_Inventory_Management_System
 {
     public partial class MainScreen : Form
     {
-        private BindingList<Part> partsList = new BindingList<Part>();
+        private BindingList<Models.Part> partsList = new BindingList<Models.Part>();
         private BindingList<Product> productsList = new BindingList<Product>();
-        private BindingList<Part> filteredPartsList;
+        private BindingList<Models.Part> filteredPartsList;
         private BindingList<Product> filteredProductsList; 
 
         public MainScreen()
@@ -26,11 +26,11 @@ namespace Software_1_Inventory_Management_System
 
         
         private void InitializeData()
-        { 
-            partsList.Add(new Part { PartID = 0, PartName = "Wheel", PartInventory = 15, PartPrice = 12.11m, PartMin = 5, PartMax = 25 });
-            partsList.Add(new Part { PartID = 1, PartName = "Pedal", PartInventory = 11, PartPrice = 8.22m, PartMin = 5, PartMax = 25 });
-            partsList.Add(new Part { PartID = 2, PartName = "Chain", PartInventory = 12, PartPrice = 8.33m, PartMin = 5, PartMax = 25 });
-            partsList.Add(new Part { PartID = 3, PartName = "Seat", PartInventory = 18, PartPrice = 4.55m, PartMin = 2, PartMax = 15 });
+        {
+            partsList.Add(new Models.Part { PartID = 0, PartName = "Wheel", PartInventory = 15, PartPrice = 12.11m, PartMin = 5, PartMax = 25 });
+            partsList.Add(new Models.Part { PartID = 1, PartName = "Pedal", PartInventory = 11, PartPrice = 8.22m, PartMin = 5, PartMax = 25 });
+            partsList.Add(new Models.Part { PartID = 2, PartName = "Chain", PartInventory = 12, PartPrice = 8.33m, PartMin = 5, PartMax = 25 });
+            partsList.Add(new Models.Part { PartID = 3, PartName = "Seat", PartInventory = 18, PartPrice = 4.55m, PartMin = 2, PartMax = 15 });
 
             productsList.Add(new Product { ProductID = 0, ProductName = "Red Bicycle", ProductInventory = 15, ProductPrice = 11.44m, ProductMin = 1, ProductMax = 25 });
             productsList.Add(new Product { ProductID = 1, ProductName = "Yellow Bicycle", ProductInventory = 19, ProductPrice = 9.66m, ProductMin = 1, ProductMax = 20 });
@@ -55,6 +55,20 @@ namespace Software_1_Inventory_Management_System
             partsDataGridView.Columns["PartPrice"].HeaderText = "Price";
             partsDataGridView.Columns["PartMin"].HeaderText = "Min";
             partsDataGridView.Columns["PartMax"].HeaderText = "Max";
+
+            // productsDGV customization
+            productsDataGridView.ReadOnly = true;
+            productsDataGridView.RowHeadersVisible = false;
+            productsDataGridView.AllowUserToAddRows = false;
+            productsDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            // Modify the Headers in the productsDataGridView
+            productsDataGridView.Columns["ProductID"].HeaderText = "Product ID";
+            productsDataGridView.Columns["ProductName"].HeaderText = "Product Name";
+            productsDataGridView.Columns["ProductInventory"].HeaderText = "Inventory";
+            productsDataGridView.Columns["ProductPrice"].HeaderText = "Price";
+            productsDataGridView.Columns["ProductMin"].HeaderText = "Min";
+            productsDataGridView.Columns["ProductMax"].HeaderText = "Max";
         }
     }
 }

@@ -66,18 +66,18 @@
             this.partsDataGridView.Name = "partsDataGridView";
             this.partsDataGridView.RowHeadersWidth = 62;
             this.partsDataGridView.RowTemplate.Height = 28;
-            this.partsDataGridView.Size = new System.Drawing.Size(567, 181);
+            this.partsDataGridView.Size = new System.Drawing.Size(567, 244);
             this.partsDataGridView.TabIndex = 1;
             // 
             // productsDataGridView
             // 
             this.productsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.productsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsDataGridView.Location = new System.Drawing.Point(627, 170);
+            this.productsDataGridView.Location = new System.Drawing.Point(601, 170);
             this.productsDataGridView.Name = "productsDataGridView";
             this.productsDataGridView.RowHeadersWidth = 62;
             this.productsDataGridView.RowTemplate.Height = 28;
-            this.productsDataGridView.Size = new System.Drawing.Size(543, 181);
+            this.productsDataGridView.Size = new System.Drawing.Size(569, 244);
             this.productsDataGridView.TabIndex = 2;
             // 
             // partsDataGridViewLabel
@@ -94,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(627, 143);
+            this.label1.Location = new System.Drawing.Point(597, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 20);
             this.label1.TabIndex = 4;
@@ -134,7 +134,7 @@
             // 
             // partsAddBtn
             // 
-            this.partsAddBtn.Location = new System.Drawing.Point(261, 357);
+            this.partsAddBtn.Location = new System.Drawing.Point(261, 420);
             this.partsAddBtn.Name = "partsAddBtn";
             this.partsAddBtn.Size = new System.Drawing.Size(89, 35);
             this.partsAddBtn.TabIndex = 9;
@@ -143,7 +143,7 @@
             // 
             // partsModifyBtn
             // 
-            this.partsModifyBtn.Location = new System.Drawing.Point(375, 357);
+            this.partsModifyBtn.Location = new System.Drawing.Point(375, 420);
             this.partsModifyBtn.Name = "partsModifyBtn";
             this.partsModifyBtn.Size = new System.Drawing.Size(89, 35);
             this.partsModifyBtn.TabIndex = 10;
@@ -152,7 +152,7 @@
             // 
             // partsDeleteBtn
             // 
-            this.partsDeleteBtn.Location = new System.Drawing.Point(488, 357);
+            this.partsDeleteBtn.Location = new System.Drawing.Point(488, 420);
             this.partsDeleteBtn.Name = "partsDeleteBtn";
             this.partsDeleteBtn.Size = new System.Drawing.Size(89, 35);
             this.partsDeleteBtn.TabIndex = 11;
@@ -161,7 +161,7 @@
             // 
             // productsAddBtn
             // 
-            this.productsAddBtn.Location = new System.Drawing.Point(860, 357);
+            this.productsAddBtn.Location = new System.Drawing.Point(848, 420);
             this.productsAddBtn.Name = "productsAddBtn";
             this.productsAddBtn.Size = new System.Drawing.Size(89, 35);
             this.productsAddBtn.TabIndex = 12;
@@ -170,7 +170,7 @@
             // 
             // productsModifyBtn
             // 
-            this.productsModifyBtn.Location = new System.Drawing.Point(973, 357);
+            this.productsModifyBtn.Location = new System.Drawing.Point(968, 420);
             this.productsModifyBtn.Name = "productsModifyBtn";
             this.productsModifyBtn.Size = new System.Drawing.Size(89, 35);
             this.productsModifyBtn.TabIndex = 13;
@@ -179,7 +179,7 @@
             // 
             // productsDeleteBtn
             // 
-            this.productsDeleteBtn.Location = new System.Drawing.Point(1081, 357);
+            this.productsDeleteBtn.Location = new System.Drawing.Point(1081, 420);
             this.productsDeleteBtn.Name = "productsDeleteBtn";
             this.productsDeleteBtn.Size = new System.Drawing.Size(89, 35);
             this.productsDeleteBtn.TabIndex = 14;
