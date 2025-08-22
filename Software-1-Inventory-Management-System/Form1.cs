@@ -22,9 +22,15 @@ namespace Software_1_Inventory_Management_System
         {
             InitializeComponent();
             InitializeData();
+
+            // Wire up Event Handlers
+            partsDeleteBtn.Click += new EventHandler(partsDeleteBtn_Click);
+            partsSearchBtn.Click += new EventHandler(partsSearchBtn_Click);
+            productsDeleteBtn.Click += new EventHandler(productsDeleteBtn_Click);
+            productsSearchBtn.Click += new EventHandler(productsSearchBtn_Click);
         }
 
-        
+
         private void InitializeData()
         {
             partsList.Add(new Models.Part { PartID = 0, PartName = "Wheel", PartInventory = 15, PartPrice = 12.11m, PartMin = 5, PartMax = 25 });
@@ -69,6 +75,36 @@ namespace Software_1_Inventory_Management_System
             productsDataGridView.Columns["ProductPrice"].HeaderText = "Price";
             productsDataGridView.Columns["ProductMin"].HeaderText = "Min";
             productsDataGridView.Columns["ProductMax"].HeaderText = "Max";
+        }
+
+        private void partsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void productsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void partsSearchBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productsSearchBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void partsDeleteBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productsDeleteBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -68,6 +68,7 @@
             this.partsDataGridView.RowTemplate.Height = 28;
             this.partsDataGridView.Size = new System.Drawing.Size(567, 244);
             this.partsDataGridView.TabIndex = 1;
+            this.partsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.partsDataGridView_CellContentClick);
             // 
             // productsDataGridView
             // 
@@ -79,6 +80,7 @@
             this.productsDataGridView.RowTemplate.Height = 28;
             this.productsDataGridView.Size = new System.Drawing.Size(569, 244);
             this.productsDataGridView.TabIndex = 2;
+            this.productsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsDataGridView_CellContentClick);
             // 
             // partsDataGridViewLabel
             // 
@@ -122,6 +124,7 @@
             this.partsSearchBtn.TabIndex = 7;
             this.partsSearchBtn.Text = "Search";
             this.partsSearchBtn.UseVisualStyleBackColor = true;
+            this.partsSearchBtn.Click += new System.EventHandler(this.partsSearchBtn_Click);
             // 
             // productsSearchBtn
             // 
@@ -131,6 +134,7 @@
             this.productsSearchBtn.TabIndex = 8;
             this.productsSearchBtn.Text = "Search";
             this.productsSearchBtn.UseVisualStyleBackColor = true;
+            this.productsSearchBtn.Click += new System.EventHandler(this.productsSearchBtn_Click);
             // 
             // partsAddBtn
             // 
@@ -158,6 +162,7 @@
             this.partsDeleteBtn.TabIndex = 11;
             this.partsDeleteBtn.Text = "Delete";
             this.partsDeleteBtn.UseVisualStyleBackColor = true;
+            this.partsDeleteBtn.Click += new System.EventHandler(this.partsDeleteBtn_Click);
             // 
             // productsAddBtn
             // 
@@ -185,6 +190,7 @@
             this.productsDeleteBtn.TabIndex = 14;
             this.productsDeleteBtn.Text = "Delete";
             this.productsDeleteBtn.UseVisualStyleBackColor = true;
+            this.productsDeleteBtn.Click += new System.EventHandler(this.productsDeleteBtn_Click);
             // 
             // exitBtn
             // 
