@@ -89,7 +89,25 @@ namespace Software_1_Inventory_Management_System
 
         private void partsSearchBtn_Click(object sender, EventArgs e)
         {
+            string searchText = partsSearchTxtBox.Text.ToLower();
 
+            if (string.IsNullOrEmpty(searchText))
+            {
+                partsDataGridView.DataSource = partsList;
+            }
+            else
+            { 
+                filteredPartsList = new BindingList<Part>(partsList.Where(p =>
+                    p.PartName.ToLower().Contains(searchText) ||
+                    p.PartID.ToString().Contains(searchText) ||
+                    p.PartInventory.ToString().Contains(searchText) ||
+                    p.PartPrice.ToString().Contains(searchText) ||
+                    p.PartMin.ToString().Contains(searchText) ||
+                    p.PartMax.ToString().Contains(searchText)
+                ).ToList());
+
+                partsDataGridView.DataSource = filteredPartsList;
+            }
         }
 
         private void productsSearchBtn_Click(object sender, EventArgs e)
@@ -153,7 +171,16 @@ namespace Software_1_Inventory_Management_System
 
         private void productsDeleteBtn_Click(object sender, EventArgs e)
         {
-
+            if (productsDataGridView.SelectedRows.Count > 0)
+            {
+                var result = MessageBox.Show("Are you sure you want to delete the selected product?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    int selectedIndex = productsDataGridView.SelectedRows[0].Index;
+                    productsList.RemoveAt(selectedIndex);
+                    productsDataGridView.ClearSelection();
+                }
+            }
         }
 
         private void partsSearchTxtBox_TextChanged(object sender, EventArgs e)

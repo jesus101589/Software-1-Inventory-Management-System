@@ -154,6 +154,7 @@
             // 
             // addProductCandidateDgv
             // 
+            this.addProductCandidateDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.addProductCandidateDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.addProductCandidateDgv.Location = new System.Drawing.Point(428, 57);
             this.addProductCandidateDgv.Name = "addProductCandidateDgv";
@@ -164,6 +165,7 @@
             // 
             // addProductAssociatedDgv
             // 
+            this.addProductAssociatedDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.addProductAssociatedDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.addProductAssociatedDgv.Location = new System.Drawing.Point(428, 302);
             this.addProductAssociatedDgv.Name = "addProductAssociatedDgv";
@@ -259,7 +261,7 @@
             // modifyProductLabel
             // 
             this.modifyProductLabel.AutoSize = true;
-            this.modifyProductLabel.Location = new System.Drawing.Point(5, 28);
+            this.modifyProductLabel.Location = new System.Drawing.Point(5, 9);
             this.modifyProductLabel.Name = "modifyProductLabel";
             this.modifyProductLabel.Size = new System.Drawing.Size(114, 20);
             this.modifyProductLabel.TabIndex = 23;

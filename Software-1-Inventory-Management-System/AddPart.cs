@@ -27,7 +27,9 @@ namespace Software_1_Inventory_Management_System
         }
 
         private void InitializeForm(Part part)
-        {
+        {   
+
+
             partInHouseRadioBtn.CheckedChanged += new EventHandler(partInHouseRadioBtn_CheckedChanged);
             partOutsourcedRadioBtn.CheckedChanged += new EventHandler(partOutsourcedRadioBtn_CheckedChanged);
 
@@ -61,6 +63,20 @@ namespace Software_1_Inventory_Management_System
                 addPartCompanyNameLabel.Visible = true;
 
                 partInHouseRadioBtn.Checked = true; // Default to In-House
+            }
+        }
+
+        private void partOutsourcedRadioBtn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (partInHouseRadioBtn.Checked)
+            {
+                addPartMachineIDLabel.Visible = true;
+                addPartMachineIDTxtBox.Visible = true;
+            }
+            else if (partOutsourcedRadioBtn.Checked)
+            {
+                addPartMachineIDLabel.Visible = false;
+                addPartMachineIDTxtBox.Visible = false;
             }
         }
 
@@ -114,20 +130,7 @@ namespace Software_1_Inventory_Management_System
             // This is just a placeholder for the label click event
         }
 
-        private void partOutsourcedRadioBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            if (partInHouseRadioBtn.Checked)
-            { 
-                addPartMachineIDLabel.Visible = true;
-                addPartMachineIDTxtBox.Visible = true;
-            }
-            else if (partOutsourcedRadioBtn.Checked)
-            {
-                addPartMachineIDLabel.Visible = false;
-                addPartMachineIDTxtBox.Visible = false;
-            }
-        }
-
+        
         private void addPartSaveBtn_Click_1(object sender, EventArgs e)
         {
             // Checks if any of the required fields are empty before saving

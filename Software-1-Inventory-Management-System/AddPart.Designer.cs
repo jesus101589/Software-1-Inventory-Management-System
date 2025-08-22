@@ -80,7 +80,7 @@
             this.partOutsourcedRadioBtn.Location = new System.Drawing.Point(374, 5);
             this.partOutsourcedRadioBtn.Name = "partOutsourcedRadioBtn";
             this.partOutsourcedRadioBtn.Size = new System.Drawing.Size(117, 24);
-            this.partOutsourcedRadioBtn.TabIndex = 3;
+            this.partOutsourcedRadioBtn.TabIndex = 2;
             this.partOutsourcedRadioBtn.TabStop = true;
             this.partOutsourcedRadioBtn.Text = "Outsourced";
             this.partOutsourcedRadioBtn.UseVisualStyleBackColor = true;
@@ -223,7 +223,7 @@
             // 
             this.modifyPartLabel.AutoSize = true;
             this.modifyPartLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifyPartLabel.Location = new System.Drawing.Point(12, 29);
+            this.modifyPartLabel.Location = new System.Drawing.Point(12, 9);
             this.modifyPartLabel.Name = "modifyPartLabel";
             this.modifyPartLabel.Size = new System.Drawing.Size(99, 20);
             this.modifyPartLabel.TabIndex = 20;
