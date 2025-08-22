@@ -94,7 +94,25 @@ namespace Software_1_Inventory_Management_System
 
         private void productsSearchBtn_Click(object sender, EventArgs e)
         {
+            string searchText = productsSearchTxtBox.Text.ToLower();
 
+            if (string.IsNullOrEmpty(searchText))
+            {
+                productsDataGridView.DataSource = productsList;
+            }
+            else
+            { 
+                filteredProductsList = new BindingList<Product>(productsList.Where(p =>
+                    p.ProductName.ToLower().Contains(searchText) ||
+                    p.ProductID.ToString().Contains(searchText) ||
+                    p.ProductInventory.ToString().Contains(searchText) ||
+                    p.ProductPrice.ToString().Contains(searchText) ||
+                    p.ProductMin.ToString().Contains(searchText) ||
+                    p.ProductMax.ToString().Contains(searchText)
+                ).ToList());
+
+                productsDataGridView.DataSource = filteredProductsList;
+            }
         }
 
         private void partsDeleteBtn_Click(object sender, EventArgs e)
@@ -195,5 +213,14 @@ namespace Software_1_Inventory_Management_System
             }
         }
 
+        private void productsAddBtn_Click(object sender, EventArgs e)
+        {
+            AddProduct addProductForm = new AddProduct(partsList);
+            if (addProductForm.ShowDialog() == DialogResult.OK)
+            {
+                // Add the new product to the productsList
+                productsList.Add(addProductForm.Product);
+            }
+        }
     }
 }

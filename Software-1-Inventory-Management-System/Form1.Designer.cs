@@ -176,6 +176,7 @@
             this.productsAddBtn.TabIndex = 12;
             this.productsAddBtn.Text = "Add";
             this.productsAddBtn.UseVisualStyleBackColor = true;
+            this.productsAddBtn.Click += new System.EventHandler(this.productsAddBtn_Click);
             // 
             // productsModifyBtn
             // 

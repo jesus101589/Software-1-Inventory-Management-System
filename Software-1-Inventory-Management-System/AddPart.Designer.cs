@@ -222,16 +222,17 @@
             // modifyPartLabel
             // 
             this.modifyPartLabel.AutoSize = true;
-            this.modifyPartLabel.Location = new System.Drawing.Point(509, 59);
+            this.modifyPartLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyPartLabel.Location = new System.Drawing.Point(12, 29);
             this.modifyPartLabel.Name = "modifyPartLabel";
-            this.modifyPartLabel.Size = new System.Drawing.Size(88, 20);
+            this.modifyPartLabel.Size = new System.Drawing.Size(99, 20);
             this.modifyPartLabel.TabIndex = 20;
             this.modifyPartLabel.Text = "Modify Part";
             // 
             // addPartCompanyNameLabel
             // 
             this.addPartCompanyNameLabel.AutoSize = true;
-            this.addPartCompanyNameLabel.Location = new System.Drawing.Point(509, 92);
+            this.addPartCompanyNameLabel.Location = new System.Drawing.Point(89, 348);
             this.addPartCompanyNameLabel.Name = "addPartCompanyNameLabel";
             this.addPartCompanyNameLabel.Size = new System.Drawing.Size(122, 20);
             this.addPartCompanyNameLabel.TabIndex = 21;
@@ -240,9 +241,9 @@
             // 
             // addPartCompanyNameTxtBox
             // 
-            this.addPartCompanyNameTxtBox.Location = new System.Drawing.Point(513, 134);
+            this.addPartCompanyNameTxtBox.Location = new System.Drawing.Point(253, 345);
             this.addPartCompanyNameTxtBox.Name = "addPartCompanyNameTxtBox";
-            this.addPartCompanyNameTxtBox.Size = new System.Drawing.Size(100, 26);
+            this.addPartCompanyNameTxtBox.Size = new System.Drawing.Size(141, 26);
             this.addPartCompanyNameTxtBox.TabIndex = 22;
             this.addPartCompanyNameTxtBox.TextChanged += new System.EventHandler(this.addPartCompanyNameTxtBox_TextChanged);
             // 
