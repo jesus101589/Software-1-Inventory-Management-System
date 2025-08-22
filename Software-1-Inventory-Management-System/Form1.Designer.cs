@@ -108,6 +108,7 @@
             this.partsSearchTxtBox.Name = "partsSearchTxtBox";
             this.partsSearchTxtBox.Size = new System.Drawing.Size(163, 26);
             this.partsSearchTxtBox.TabIndex = 5;
+            this.partsSearchTxtBox.TextChanged += new System.EventHandler(this.partsSearchTxtBox_TextChanged);
             // 
             // productsSearchTxtBox
             // 
@@ -115,6 +116,7 @@
             this.productsSearchTxtBox.Name = "productsSearchTxtBox";
             this.productsSearchTxtBox.Size = new System.Drawing.Size(163, 26);
             this.productsSearchTxtBox.TabIndex = 6;
+            this.productsSearchTxtBox.TextChanged += new System.EventHandler(this.productsSearchTxtBox_TextChanged);
             // 
             // partsSearchBtn
             // 
@@ -144,6 +146,7 @@
             this.partsAddBtn.TabIndex = 9;
             this.partsAddBtn.Text = "Add";
             this.partsAddBtn.UseVisualStyleBackColor = true;
+            this.partsAddBtn.Click += new System.EventHandler(this.partsAddBtn_Click);
             // 
             // partsModifyBtn
             // 
@@ -153,6 +156,7 @@
             this.partsModifyBtn.TabIndex = 10;
             this.partsModifyBtn.Text = "Modify";
             this.partsModifyBtn.UseVisualStyleBackColor = true;
+            this.partsModifyBtn.Click += new System.EventHandler(this.partsModifyBtn_Click);
             // 
             // partsDeleteBtn
             // 
@@ -181,6 +185,7 @@
             this.productsModifyBtn.TabIndex = 13;
             this.productsModifyBtn.Text = "Modify";
             this.productsModifyBtn.UseVisualStyleBackColor = true;
+            this.productsModifyBtn.Click += new System.EventHandler(this.productsModifyBtn_Click);
             // 
             // productsDeleteBtn
             // 
@@ -200,6 +205,7 @@
             this.exitBtn.TabIndex = 15;
             this.exitBtn.Text = "Exit";
             this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // MainScreen
             // 

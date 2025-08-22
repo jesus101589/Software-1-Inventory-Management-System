@@ -99,12 +99,101 @@ namespace Software_1_Inventory_Management_System
 
         private void partsDeleteBtn_Click(object sender, EventArgs e)
         {
+            // Check to see if a row is selected
+            if (partsDataGridView.SelectedRows.Count > 0)
+            {
+                // Get the selected row (part)
+                int selectedIndex = partsDataGridView.SelectedRows[0].Index;
+                Part selectedPart = (Part)partsDataGridView.Rows[selectedIndex].DataBoundItem;
 
+                // Now we check if the part is associated with any products
+                bool isPartAssociated = productsList.Any(product => product.AssociatedParts.Contains(selectedPart));
+
+                if (isPartAssociated)
+                {
+                    MessageBox.Show("Cannot delete this part because it is associated with one or more products.", "Delete Part", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Verify deletion
+                var result = MessageBox.Show($"Are you sure you want to delete the part '{selectedPart.PartName}'?", "Delete Part", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Remove the part from the partsList
+                    partsList.RemoveAt(selectedIndex);
+
+                    // clear the selection in the DataGridView
+                    partsDataGridView.ClearSelection();
+                }
+            }
+            else
+            { 
+                MessageBox.Show("Please select a part to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void productsDeleteBtn_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void partsSearchTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void productsSearchTxtBox_TextChanged(object sender, EventArgs e)
+        { 
+        
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void partsAddBtn_Click(object sender, EventArgs e)
+        {
+            AddPart addPartForm = new AddPart();
+            if (addPartForm.ShowDialog() == DialogResult.OK)
+            {
+                // Add the new part to the partsList
+                partsList.Add(addPartForm.Part);
+            }
+        }
+
+        private void partsModifyBtn_Click(object sender, EventArgs e)
+        {
+            if (partsDataGridView.SelectedRows.Count > 0)
+            { 
+                int selectedIndex = partsDataGridView.SelectedRows[0].Index;
+                Part selectedPart = partsList[selectedIndex];
+
+                AddPart modifyPartForm = new AddPart(selectedPart);
+                if (modifyPartForm.ShowDialog() == DialogResult.OK)
+                {
+                    // Update the part in the partsList
+                    partsList[selectedIndex] = modifyPartForm.Part;
+                }
+            }
+        }
+
+        private void productsModifyBtn_Click(object sender, EventArgs e)
+        {
+            if (productsDataGridView.SelectedRows.Count > 0)
+            { 
+                int selectedIndex = productsDataGridView.SelectedRows[0].Index;
+                Product selectedProduct = productsList[selectedIndex];
+
+                AddProduct modifyProductForm = new AddProduct(selectedProduct, partsList);
+                if (modifyProductForm.ShowDialog() == DialogResult.OK)
+                {
+                    // Update the product in the productsList
+                    productsList[selectedIndex] = modifyProductForm.Product;
+                }
+            }
+        }
+
     }
 }
